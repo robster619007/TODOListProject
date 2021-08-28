@@ -23,4 +23,5 @@ class CreateTask(CreateView):
 class UpdateTask(UpdateView):
     model = TodoTask
     fields = '__all__'
+    template_name = 'main/task_form.html'
     success_url = reverse_lazy('Task')

@@ -8,6 +8,7 @@
     <tr>
         <td>{{task.title}}</td>
         <td><a href="{% url 'detail' task.id %}">Show</a></td>
+        <td><a href="{% url 'updateTask' task.id %}">Update</a></td>
     </tr>
     {% empty %}
         <h3>No to do list items</h3>
