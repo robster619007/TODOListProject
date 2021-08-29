@@ -20,7 +20,7 @@ class UserLogin(LoginView):
 class TodoList(LoginRequiredMixin,ListView):
     model = TodoTask
     context_object_name = 'TodoList'
-    # function to only show the to do list for the user's account
+    # function to only show the todo list for the user's account
     def get_context_data(self,**kwargs):
         context = super().get_context_data(**kwargs)
         context['TodoList'] = context['TodoList'].filter(user = self.request.user)
